@@ -1,0 +1,122 @@
+.header-1{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: 99999;
+    background: transparent;
+    padding: 21px 40px 0 24px; /*top right bottom left*/
+    border-bottom: 2px solid rgba(224, 203, 203, 0.5); /*0.5- alpha*/
+    transition: all ease 1s; /*Smoothness*/
+}
+
+#header{
+    position:absolute;
+    width: 100%;
+}
+
+/* add fixedbar using JS */
+/*!important romove all the bootstrap css and set the important value*/
+.header-1.fixedbar{
+    position: fixed !important;
+    background: rgb(34, 34, 34);
+    padding: 10px 40px 0 24px;
+
+}
+
+/* for logo class*/
+.logo{
+    float: left;
+    width: 100%;
+    margin: 6px;
+    text-align: left;
+    padding: 0,0 25px;
+}
+
+/*for logo class img tag*/
+.logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+.mainmenu{
+    position: relative;
+}
+
+.mainmenu ul{
+    margin: 0;
+    padding: 0;
+
+}
+
+.mainmenu ul li{
+    list-style: none;/*no bullets*/
+    display: inline-block; /*all the menues to one line*/
+    line-height: 0.8;/*for gapping*/
+    padding: 25px 20px 18px;
+    position: relative;
+}
+
+.mainmenu ul li Link{
+    display: block;
+    color: white;
+    font-size: 17px;
+    line-height: 0.8;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;/*no any text decorations*/
+    padding: 0px;
+    letter-spacing: 1px;/*space between letters*/
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    justify-content: center;
+}
+
+/* psuedo properties
+    ::after
+    ::before
+    ::content
+*/
+.mainmenu ul li Link:after{
+    position: absolute;
+    width: 0;
+    height: 1px;
+    content: '';
+    background: white;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    transition: all 0.4s ease-out ;
+}
+
+.mainmenu ul li Link:hover{
+    color: white;
+}
+
+.mainmenu ul li Link:hover:after{
+    width: 100%;
+}
+
+.navigator {
+    position: relative;
+    padding: 21px 0 12px;
+}
+.navigator Link{
+    display: inline-block;
+    color: white;
+    line-height: 0.8;
+    font-size: 24px;
+    margin: 0;
+}
+
+/*navigator a tag search class*/
+.navigator Link.search{
+    margin-right: 16px;
+}
+}
